@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CrystalsCollector Pseudocode</title>
+    <!--link rel="stylesheet" type="text/css" href="assets/css/reset.css"-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>CrystalCollectors Pseudocode</h1>
+        </header>
+        <section id="main">
+            
+            <h2>Game Rules</h2>
+            <ul>
+                <li>There will be four crystals displayed as buttons on the page.</li>
+                <li>The player will be shown a random number at the start of the game between 19 - 120.</li>
+                <li>When the player clicks on a crystal, it will add a specific amount of points to the player's total score.</li>
+                <ul>
+                    <li>Your game will hide this amount until the player clicks a crystal.</li>
+                    <li>Each crystal has a random hidden value between 1 - 12.</li>
+                    <li>When they do click one, update the player's score counter.</li>
+                </ul>
+                <li>The player wins if their total score matches the random number from the beginning of the game.</li>
+                <li>The player loses if their score goes above the random number.</li>
+                <li>The game restarts whenever the player wins or loses.</li>
+                <ul>
+                    <li>When the game begins again, the player should see a new random number. 
+                    <li>Also, all the crystals will have four new hidden values.</li> 
+                    <li>Of course, the user's score (and score counter) will reset to zero.</li>
+                </ul>
+                <li>The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.</li>
+            </ul>
+            
+            <h2>Pseudocode</h2>
+            <h3>Game starts with:</h3>
+            <ul>
+                <li>0 wins.</li>
+                <li>0 losses.</li>
+                <li>A random number between 19 - 120.</li>
+                <li>Set player's score to 0.</li>
+                <li>Each crystal assigned a random number between 1-12.</li>
+            </ul>
+            
+            <h3>Game restarts:</h3>
+            <ul>
+                <li>After a win.</li>
+                <li>After a loss.</li>
+                <li>Generate a new random number between 19 - 120.</li>
+                <li>Reset player's score to 0.</li>
+                <li>Assign new random numbers to crystals between 1 - 12.</li>
+
+            </ul>
+            
+            <h3>Random Number</h3>
+              <ul>
+                <li>Generate a new random number between 19 - 120 at the start of each game.</li>
+                <li>Reset to another random number between 19 - 120 when game is restarted</li>
+              </ul>
+
+            <h3>Crystals</h3>
+            <ul>
+                <li>Assign a variable to each crystal.</li>
+                <li>Each crystal is a button.</li>
+                <li>Each crystal has a random value between 1 - 12.</li>
+                <li>The random value is hidden until the player clicks on the button for it.</li>
+                <li>Once a player clicks on a crystal, reveal the random value.</li>
+                <li>Add the value of the crystal to the player's score each time it's clicked</li>
+            </ul>
+            
+            <h3>Scoring</h3>
+            
+            <h4>Player's Score</h4>
+              <ul>
+                <li>Starts with 0.</li>
+                <li>When the player clicks a crystal, add its random value to the score.</li>
+                <li>If the players score equals the random value of the number, the player wins.</li>
+                <li>Else the player loses if their score goes above the random value.</li>
+              </ul>
+            
+            <h4>Wins and Losses</h4>
+              <ul>
+                <li>If player score equals random number, add + 1 to Wins.</li>
+                <li>Else player score is greater than random number, add +1 to Losses.</li>
+              </ul>
+                            
+        </section>
+    </div>
+</body>
+
+</html>
