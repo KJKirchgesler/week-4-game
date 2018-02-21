@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CrystalsCollector Game</title>
-    
+      <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -22,7 +23,12 @@
 
 			<div id="game-panel">
 				<div id="random-number"></div>
-				<div id="crystal-buttons"></div>
+				<div id="crystal-display">
+					<img src="assets/images/crystals/red.png" alt="red crystal">
+					<img src="assets/images/crystals/blue.png" alt="blue crystal">
+					<img src="assets/images/crystals/yellow.png" alt="yellow crystal">
+					<img src="assets/images/crystals/green.png" alt="green crystal">
+				</div>
 				<div id="player-score"></div>
 			</div>
 
@@ -32,7 +38,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- Linking to our JavaScript file. -->
+		<!-- Linking to our JavaScript file. -->
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 
