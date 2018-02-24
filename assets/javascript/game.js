@@ -1,3 +1,7 @@
+	var randomNumber;
+	var lost = 0;
+	var win = 0;
+	var counter = 0;
 
 	//Generating a new random number between 19 and 120
 	randomNumber = Math.floor(Math.random() * 101 ) + 19; 
@@ -30,7 +34,12 @@
 
 
 	$(".crystal").on('click', function () {
-		console.log($(this).attr("data-random"));
+		var num = parseInt($(this).attr("data-random"));
+
+		counter += num;
+
+		console.log(counter);
+
 	
 });
 
