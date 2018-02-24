@@ -26,6 +26,9 @@
 			"class": "crystal",
 			"data-random" : randomCrystalValue
 			});
+			
+			//Adding crystal values to the DOM
+			crystal.html(randomCrystalValue);
 
 	//Adding crystals images to the DOM
 	$(".crystals").append(crystal);
@@ -37,8 +40,16 @@
 		var num = parseInt($(this).attr("data-random"));
 
 		counter += num;
-
 		console.log(counter);
+
+		if(counter > randomNumber) {
+			console.log("You lost!");
+		}
+
+		else if(counter === randomNumber) {
+			console.log("You win!");
+
+		}
 
 	
 });
