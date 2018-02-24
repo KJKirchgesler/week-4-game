@@ -1,0 +1,15 @@
+body {
+	background-color: pink;
+}
+
+.crystals {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.crystal {
+	border: 1px solid red;
+	height: 100px;
+	width: 100px;
+}
