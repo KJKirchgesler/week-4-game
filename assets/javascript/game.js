@@ -50,7 +50,7 @@ var resetAndStart = function () {
 
 	}
 
-	$("#score").html("Total Score: " + counter);
+	$("#counter").html("Total Score: " + counter);
 }
 //Allows the function to run when the page reloads
 resetAndStart();
@@ -64,35 +64,38 @@ $(document).on('click', ".crystal", function () {
 
 	counter += num;
 	
-	$("#score").html("Total Score: " + counter);
+	$("#counter").html("Total Score: " + counter);
+
+	console.log(counter);
 
 	//comparing previous to random result
 	//player loses if previous exceeds random number
-	if(counter > randomNumber) {
+	if (counter > randomNumber) {
+		
 		losses++;
 		
 		$("#losses").html("Losses: " + losses);
 
-		counter = 0;
+		 counter = 0;
 
-		//resets and starts the game
+		 //resets and starts the game
 		resetAndStart();
-
-		}
+	} 
 
 	//player wins if previous matches random number
-	else if(counter === randomNumber) {
+	else if (counter === randomNumber) {
+		
 		wins++;
 		
 		$("#wins").html("Wins: " + wins);
 
 		counter = 0;
 
-		//resets and starts the game
+		//reusable function - resets and starts game
 		resetAndStart();
+	}
 
-		}
-	
+ 
 });
 
 
