@@ -9,6 +9,13 @@ var resetAndStart = function () {
 	//resetting crystal values
 	$(".crystals").empty();
 
+	var images = [
+		'assets/images/crystals/red.png', 
+		'assets/images/crystals/blue.png', 
+		'assets/images/crystals/yellow.png', 
+		'assets/images/crystals/green.png',
+		];
+
 	//Generating a new random number between 19 and 120
 	randomNumber = Math.floor(Math.random() * 101 ) + 19; 
 
@@ -30,24 +37,37 @@ var resetAndStart = function () {
 				"class": "crystal",
 				"data-random" : randomCrystalValue
 			});
+			crystal.css({
+				"background-image":"url('" + images[i] + "')",
+				"background-size":"cover"
+			});
 			
 			//Adding crystal values to the DOM
-			crystal.html(randomCrystalValue);
+			//crystal.html(randomCrystalValue);
 
 		//Adding crystals images to the DOM
 		$(".crystals").append(crystal);
+
 	}
 
+	$("#score").html("Total Score: " + counter);
 }
 //Allows the function to run when the page reloads
 resetAndStart();
 
+//Changes the random crystal value generated when 
+	//the crystal is clicked from a string 
+	//to a number
 $(document).on('click', ".crystal", function () {
+	
 	var num = parseInt($(this).attr("data-random"));
 
 	counter += num;
-	console.log(counter);
+	
+	$("#score").html("Total Score: " + counter);
 
+	//comparing previous to random result
+	//player loses if previous exceeds random number
 	if(counter > randomNumber) {
 		losses++;
 		
@@ -60,6 +80,7 @@ $(document).on('click', ".crystal", function () {
 
 		}
 
+	//player wins if previous matches random number
 	else if(counter === randomNumber) {
 		wins++;
 		
