@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CrystalsCollector Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
       <!-- Added link to the jQuery Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -12,7 +13,7 @@
 
 <body>
 	<h1>CrystalsCollector!</h1>
-	<div id="container">
+	<div class="container">
 		<div id="game-section">
 			<div id="instructions">
 				<p>You will be given a random number at the start of the game.</p>
@@ -23,17 +24,19 @@
 			</div>
 
 			<div id="game-panel">
+				<div id="counter"></div>
 				<div id="random-spot">
 					<h2><span id="number-to-match"></span></h2>
 				</div>
+				<div id="scoreboard">
+					<div id="wins"></div>
+					<div id="losses"></div>
+				</div>
 				<div class="crystals"></div>
-				<div id="counter"></div>
+				
 			</div>
 
-			<div id="scoreboard">
-				<div id="wins"></div>
-				<div id="losses"></div>
-			</div>
+			
 		</div>
 	</div>
 		<!-- Linking to our JavaScript file. -->
